@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafeno Vetor — Editor Vetorial Open Source</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+            background: #0a0c10;
+            color: #e0e0e0;
+            min-height: 100vh;
+        }
+        .hero {
+            background: linear-gradient(135deg, #1a2744 0%, #0d1520 100%);
+            padding: 60px 32px;
+            text-align: center;
+            border-bottom: 1px solid #1e2d42;
+        }
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 800;
+            background: linear-gradient(90deg, #4a9eff, #00d4ff, #7b68ee);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+        }
+        .hero p {
+            font-size: 18px;
+            color: #8892a4;
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: #1e2738;
+            border: 1px solid #2a3a52;
+            border-radius: 12px;
+            font-size: 13px;
+            color: #4a9eff;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #4a9eff, #00d4ff);
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(74, 158, 255, 0.3);
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(74, 158, 255, 0.4); }
+        .btn-secondary {
+            background: #1e2738;
+            color: #e0e0e0;
+            border: 1px solid #2a3a52;
+        }
+        .btn-secondary:hover { background: #252f42; }
+        .compat {
+            margin-top: 16px;
+            font-size: 13px;
+            color: #5a6478;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            padding: 60px 32px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .feature {
+            background: #111827;
+            border: 1px solid #1e2d42;
+            border-radius: 12px;
+            padding: 24px;
+        }
+        .feature h3 {
+            color: #4a9eff;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+        .feature p {
+            color: #8892a4;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .footer {
+            text-align: center;
+            padding: 24px;
+            font-size: 13px;
+            color: #3a4458;
+            border-top: 1px solid #1a1f2e;
+        }
+        .footer a { color: #4a9eff; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="badge">v0.20.0</div>
+        <h1>🎨 Grafeno Vetor</h1>
+        <p>Editor vetorial profissional, open source, escrito em Rust.<br>Abre arquivos CDR, SVG, PNG e mais.</p>
+        <div class="buttons">
+            <a href="windows/GrafenoVetor/launcher.bat" class="btn btn-primary">
+                ⬇ Baixar para Windows
+            </a>
+            <a href="https://github.com/josue2016-del/grafeno-vetor" target="_blank" class="btn btn-secondary">
+                ⭐ GitHub
+            </a>
+        </div>
+        <div class="compat">
+            ✅ Windows 10 · ✅ Windows 11 · 64-bit · Sem instalação necessária
+        </div>
+    </div>
+
+    <div class="features">
+        <div class="feature">
+            <h3>📐 Vetores profissionais</h3>
+            <p>Curvas Bézier, texturas, preenchimentos e efeitos avançados para design vetorial de alta qualidade.</p>
+        </div>
+        <div class="feature">
+            <h3>📄 Abre CorelDRAW (.cdr)</h3>
+            <p>Importa arquivos CDR nativamente — edite projetos existentes sem conversão.</p>
+        </div>
+        <div class="feature">
+            <h3>🤖 IA integrada</h3>
+            <p>Gere imagens com inteligência artificial diretamente no editor, sem sair da aba.</p>
+        </div>
+        <div class="feature">
+            <h3>🌐 Versão web</h3>
+            <p>Teste no navegador antes de baixar. Recursos limitados, mas funcional para edição básica.</p>
+        </div>
+        <div class="feature">
+            <h3>🐍 Python scripting</h3>
+            <p>Automatize tarefas com scripts Python integrados — macros, batch processing e mais.</p>
+        </div>
+        <div class="feature">
+            <h3>🎨 Multi-idioma</h3>
+            <p>Interface em português (pt-BR), inglês (en) e chinês (zh-CN, zh-TW).</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="https://github.com/josue2016-del/grafeno-vetor" target="_blank">grafeno-vetor</a> · 
+        Código livre sob MIT/Apache 2.0 · 
+        Built with egui + wgpu + Rust
+    </div>
+</body>
+</html>

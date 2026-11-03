@@ -1,0 +1,20 @@
+[package]
+name = "grafeno-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Headless Grafeno Vetor: inspect .cdr files and convert documents"
+
+[dependencies]
+grafeno-core.workspace = true
+grafeno-cdr.workspace = true
+grafeno-io.workspace = true
+grafeno-render.workspace = true
+grafeno-text.workspace = true
+env_logger.workspace = true
+log.workspace = true
+flate2 = "1"
+
+[dev-dependencies]
+image = { version = "0.25", default-features = false, features = ["png", "bmp"] }
+zip.workspace = true

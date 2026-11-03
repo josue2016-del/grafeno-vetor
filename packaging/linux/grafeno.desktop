@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Grafeno Vetor
+Comment=Vector illustration editor
+Exec=grafeno %F
+Icon=grafeno
+Terminal=false
+Categories=Graphics;2DGraphics;VectorGraphics;
+MimeType=application/x-tdraw;application/x-cdr;
+StartupWMClass=grafeno

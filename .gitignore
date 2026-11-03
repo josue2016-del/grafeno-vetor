@@ -1,0 +1,7 @@
+
+# Large Windows binaries - too big for GitHub (100 MB limit)
+dist/windows/GrafenoVetor/*.exe
+dist/windows/GrafenoVetor/*.pdb
+
+target/
+.git-bak/

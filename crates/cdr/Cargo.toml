@@ -1,0 +1,21 @@
+[package]
+name = "grafeno-cdr"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Clean-room reader for .cdr files: RIFF and ZIP containers"
+
+[dependencies]
+grafeno-core.workspace = true
+thiserror.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+log.workspace = true
+zip.workspace = true
+encoding_rs.workspace = true
+flate2 = "1"
+ttf-parser.workspace = true
+tiny-skia.workspace = true
+
+[dev-dependencies]
+grafeno-core = { workspace = true, features = ["test-profiles"] }
