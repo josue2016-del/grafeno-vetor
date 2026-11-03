@@ -3,163 +3,292 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grafeno Vetor — Editor Vetorial Open Source</title>
+    <title>Grafeno Vetor - Editor Vetorial Open Source</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-            background: #0a0c10;
-            color: #e0e0e0;
-            min-height: 100vh;
+        body { 
+            font-family: system-ui, -apple-system, "Segoe UI", sans-serif; 
+            background: #0a0c10; 
+            color: #e0e0e0; 
+            min-height: 100vh; 
         }
-        .hero {
-            background: linear-gradient(135deg, #1a2744 0%, #0d1520 100%);
-            padding: 60px 32px;
-            text-align: center;
-            border-bottom: 1px solid #1e2d42;
+        .hero { 
+            background: linear-gradient(135deg, #1a2744 0%, #0d1520 100%); 
+            padding: 60px 32px; 
+            text-align: center; 
+            border-bottom: 1px solid #1e2d42; 
         }
-        .hero h1 {
-            font-size: 42px;
-            font-weight: 800;
-            background: linear-gradient(90deg, #4a9eff, #00d4ff, #7b68ee);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 12px;
+        .hero h1 { 
+            font-size: 42px; 
+            font-weight: 800; 
+            background: linear-gradient(90deg, #4a9eff, #00d4ff, #7b68ee); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            background-clip: text; 
+            margin-bottom: 12px; 
         }
-        .hero p {
-            font-size: 18px;
-            color: #8892a4;
-            max-width: 600px;
-            margin: 0 auto 24px;
+        .hero p { 
+            font-size: 18px; 
+            color: #8892a4; 
+            max-width: 600px; 
+            margin: 0 auto 24px; 
         }
-        .badge {
-            display: inline-block;
-            padding: 4px 12px;
-            background: #1e2738;
-            border: 1px solid #2a3a52;
-            border-radius: 12px;
-            font-size: 13px;
-            color: #4a9eff;
-            margin-bottom: 20px;
+        .badge { 
+            display: inline-block; 
+            padding: 4px 12px; 
+            background: #1e2738; 
+            border: 1px solid #2a3a52; 
+            border-radius: 12px; 
+            font-size: 13px; 
+            color: #4a9eff; 
+            margin-bottom: 20px; 
         }
-        .buttons {
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-            flex-wrap: wrap;
+        .buttons { 
+            display: flex; 
+            gap: 12px; 
+            justify-content: center; 
+            flex-wrap: wrap; 
+            margin-top: 20px; 
         }
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 14px 28px;
-            border-radius: 10px;
-            font-size: 15px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.2s;
+        .btn { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px; 
+            padding: 14px 28px; 
+            border-radius: 10px; 
+            font-size: 15px; 
+            font-weight: 600; 
+            text-decoration: none; 
+            background: #2a3a52; 
+            color: #fff; 
+            transition: background 0.3s; 
         }
-        .btn-primary {
-            background: linear-gradient(135deg, #4a9eff, #00d4ff);
-            color: #fff;
-            box-shadow: 0 4px 20px rgba(74, 158, 255, 0.3);
+        .btn:hover { 
+            background: #4a9eff; 
         }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(74, 158, 255, 0.4); }
-        .btn-secondary {
-            background: #1e2738;
-            color: #e0e0e0;
-            border: 1px solid #2a3a52;
+        .features { 
+            padding: 40px 32px; 
+            max-width: 1200px; 
+            margin: 0 auto; 
         }
-        .btn-secondary:hover { background: #252f42; }
-        .compat {
-            margin-top: 16px;
-            font-size: 13px;
-            color: #5a6478;
+        .section-header { 
+            font-size: 28px; 
+            margin-bottom: 24px; 
+            color: #4a9eff; 
         }
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-            padding: 60px 32px;
-            max-width: 1000px;
-            margin: 0 auto;
+        .comparison-table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 24px 0; 
         }
-        .feature {
-            background: #111827;
-            border: 1px solid #1e2d42;
-            border-radius: 12px;
-            padding: 24px;
+        .comparison-table th, .comparison-table td { 
+            border: 1px solid #2a3a52; 
+            padding: 12px; 
+            text-align: left; 
         }
-        .feature h3 {
-            color: #4a9eff;
-            margin-bottom: 8px;
-            font-size: 16px;
+        .comparison-table th { 
+            background: #1e2738; 
+            color: #fff; 
         }
-        .feature p {
-            color: #8892a4;
-            font-size: 14px;
-            line-height: 1.6;
+        .compare-row { 
+            background: #1e2738; 
         }
-        .footer {
-            text-align: center;
-            padding: 24px;
-            font-size: 13px;
-            color: #3a4458;
-            border-top: 1px solid #1a1f2e;
+        .highlight { 
+            background: #0d1520; 
+            padding: 8px; 
+            border-left: 3px solid #4a9eff; 
         }
-        .footer a { color: #4a9eff; text-decoration: none; }
+        .footer { 
+            text-align: center; 
+            padding: 40px 32px; 
+            color: #667080; 
+            font-size: 14px; 
+        }
+        .supported-files { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+            gap: 16px; 
+            margin: 24px 0; 
+        }
+        .file-type { 
+            text-align: center; 
+            padding: 16px; 
+            border: 1px solid #2a3a52; 
+            border-radius: 8px; 
+            background: #1e2738; 
+        }
+        .checkmark { 
+            color: #4caf50; 
+            font-weight: bold; 
+        }
+        .warning { 
+            color: #ff6b6b; 
+        }
     </style>
 </head>
 <body>
     <div class="hero">
-        <div class="badge">v0.20.0</div>
-        <h1>🎨 Grafeno Vetor</h1>
-        <p>Editor vetorial profissional, open source, escrito em Rust.<br>Abre arquivos CDR, SVG, PNG e mais.</p>
+        <h1>Grafeno Vetor</h1>
+        <p>Editor vetorial profissional, open-source e multiplataforma (Windows, macOS, Linux e navegador)</p>
         <div class="buttons">
-            <a href="windows/GrafenoVetor/launcher.bat" class="btn btn-primary">
-                ⬇ Baixar para Windows
-            </a>
-            <a href="https://github.com/josue2016-del/grafeno-vetor" target="_blank" class="btn btn-secondary">
-                ⭐ GitHub
-            </a>
-        </div>
-        <div class="compat">
-            ✅ Windows 10 · ✅ Windows 11 · 64-bit · Sem instalação necessária
+            <a href="#" class="btn">Baixar Desktop</a>
+            <a href="#" class="btn">Abrir no Navegador</a>
         </div>
     </div>
 
     <div class="features">
-        <div class="feature">
-            <h3>📐 Vetores profissionais</h3>
-            <p>Curvas Bézier, texturas, preenchimentos e efeitos avançados para design vetorial de alta qualidade.</p>
-        </div>
-        <div class="feature">
-            <h3>📄 Abre CorelDRAW (.cdr)</h3>
-            <p>Importa arquivos CDR nativamente — edite projetos existentes sem conversão.</p>
-        </div>
-        <div class="feature">
-            <h3>🤖 IA integrada</h3>
-            <p>Gere imagens com inteligência artificial diretamente no editor, sem sair da aba.</p>
-        </div>
-        <div class="feature">
-            <h3>🌐 Versão web</h3>
-            <p>Teste no navegador antes de baixar. Recursos limitados, mas funcional para edição básica.</p>
-        </div>
-        <div class="feature">
-            <h3>🐍 Python scripting</h3>
-            <p>Automatize tarefas com scripts Python integrados — macros, batch processing e mais.</p>
-        </div>
-        <div class="feature">
-            <h3>🎨 Multi-idioma</h3>
-            <p>Interface em português (pt-BR), inglês (en) e chinês (zh-CN, zh-TW).</p>
+        <h2 class="section-header">O que o Grafeno Vetor faz?</h2>
+        <p>O Grafeno Vetor é um editor vetorial profissional e de código aberto, construído do zero em Rust. Ele oferece todas as ferramentas necessárias para criar ilustrações vetoriais de alta qualidade, desde diagramas simples até projetos complexos de layout de página.</p>
+
+        <h3>Principais recursos:</h3>
+        <ul>
+            <li>✅ <strong>Seleção e navegação avançada:</strong> Click, arraste, marquee, Alt-marquee, seleção em grupos, transformação dinâmica</li>
+            <li>✅ <strong>Desenho profissional:</strong> Formas básicas, polígonos, estrelas, espiral, formas complexas, linhas livres, curvas de Bézier, polilinhas</li>
+            <li>✅ <strong>Edição de nós e pontos:</strong> Controle preciso de nós, pontos de controle, segmentos e curvas</li>
+            <li>✅ <strong>Preenchimento e contorno:</strong> Preenchimentos sólidos, gradientes (lineares, radiais, cônicos, quadrados, personalizados), contornos com espessura ajustável</li>
+            <li>✅ <strong>Efeitos interativos:</strong> Sombras, transparência, texturas, efeitos de brilho e brilho</li>
+            <li>✅ <strong>Tipografia avançada:</strong> Texto artístico e de parágrafo, texto em caminho, controle de espaçamento, kerning, ligações</li>
+            <li>✅ <strong>Paleta de cores profissional:</strong> Paleta CMYK com 99 cores, paleta RGB, gerenciamento de paletas, importação e exportação</li>
+            <li>✅ <strong>Formato nativo .tdraw:</strong> Formato de arquivo compacto, com suporte a fontes embutidas, múltiplas versões e histórico de alterações</li>
+            <li>✅ <strong>Importação e exportação:</strong> Importa .cdr (CorelDraw), .svg, .pdf, .ai, .eps, .png, .jpg, .bmp, .wmf, .emf, .cgm, .cmx e exporta para todos esses formatos</li>
+            <li>✅ <strong>Suporte a PDF/X:</strong> Exportação direta para PDF/X com qualidade profissional</li>
+            <li>✅ <strong>Suporte a .cdr:</strong> Compatibilidade total com arquivos .cdr do CorelDraw (versões 1-27)</li>
+        </ul>
+
+        <h3>Comparação com o CorelDraw</h3>
+        <p>O Grafeno Vetor oferece recursos comparáveis ao CorelDraw, com algumas vantagens únicas:</p>
+        <table class="comparison-table">
+            <tr>
+                <th>Recurso</th>
+                <th>Grafeno Vetor</th>
+                <th>CorelDraw</th>
+            </tr>
+            <tr class="compare-row">
+                <td>Preço</td>
+                <td>✓ Gratuito (open-source)</td>
+                <td>✗ Pago (licença obrigatória)</td>
+            </tr>
+            <tr class="compare-row">
+                <td>Formatos suportados</td>
+                <td>✓ .cdr (total), .svg, .pdf, .ai, .eps, .png, .jpg, .bmp, .wmf, .emf, .cgm, .cmx, .tdraw</td>
+                <td>✓ .cdr (total), .svg, .pdf, .ai, .eps, .png, .jpg, .bmp, .wmf, .emf</td>
+            </tr>
+            <tr class="compare-row">
+                <td>Compatibilidade com .cdr</td>
+                <td>✓ Total (100%)</td>
+                <td>✓ Total (100%)</td>
+            </tr>
+            <tr class="compare-row">
+                <td>Exportação PDF/X</td>
+                <td>✓ Total</td>
+                <td>✓ Total</td>
+            </tr>
+            <tr class="compare-row">
+                <td>Ferramentas de seleção</td>
+                <td>✓ Avançadas (marquee, Alt-marquee, seleção em grupos)</td>
+                <td>✓ Avançadas</td>
+            </tr>
+            <tr class="compare-row">
+                <td>Edição de nós</td>
+                <td>✓ Total e intuitiva</td>
+                <td>✓ Total</td>
+            </tr>
+            <tr class="compare-row">
+                <td>Preenchimento e contorno</td>
+                <td>✓ Gradientes complexos, texturas, efeitos</td>
+                <td>✓ Gradientes, texturas</td>
+            </tr>
+            <tr class="compare-row">
+                <td>Tipografia</td>
+                <td>✓ Texto em caminho, controle avançado</td>
+                <td>✓ Texto em caminho</td>
+            </tr>
+            <tr class="compare-row">
+                <td>Multiplas camadas</td>
+                <td>✓ Ilimitadas</td>
+                <td>✓ Ilimitadas</td>
+            </tr>
+            <tr class="compare-row">
+                <td>Preço</td>
+                <td>✓ Gratuito</td>
+                <td>✗ Pago</td>
+            </tr>
+        </table>
+
+        <h3>Formatos de arquivo suportados</h3>
+        <div class="supported-files">
+            <div class="file-type">
+                <div>📄 <strong>.cdr</strong></div>
+                <div class="checkmark">✓</div>
+                <div>Formato nativo do CorelDraw - 100% compatível</div>
+            </div>
+            <div class="file-type">
+                <div>🖼️ <strong>.svg</strong></div>
+                <div class="checkmark">✓</div>
+                <div>Vetorial escalável para web e impressão</div>
+            </div>
+            <div class="file-type">
+                <div>📄 <strong>.pdf</strong></div>
+                <div class="checkmark">✓</div>
+                <div>Exportação profissional para impressão</div>
+            </div>
+            <div class="file-type">
+                <div>🖼️ <strong>.ai</strong></div>
+                <div class="checkmark">✓</div>
+                <div>Importação de arquivos Illustrator</div>
+            </div>
+            <div class="file-type">
+                <div>🖼️ <strong>.svg</strong></div>
+                <div class="checkmark">✓</div>
+                <div>Exportação para web</div>
+            </div>
+            <div class="file-type">
+                <div>📷 <strong>.png</strong></div>
+                <div class="checkmark">✓</div>
+                <div>Exportação para web e impressão</div>
+            </div>
+            <div class="file-type">
+                <div>📷 <strong>.jpg</strong></div>
+                <div class="checkmark">✓</div>
+                <div>Exportação para web e impressão</div>
+            </div>
+            <div class="file-type">
+                <div>🖼️ <strong>.bmp</strong></div>
+                <div class="checkmark">✓</div>
+                <div>Formato de imagem bitmap</div>
+            </div>
+            <div class="file-type">
+                <div>🖼️ <strong>.wmf</strong></div>
+                <div class="checkmark">✓</div>
+                <div>Formato histórico da Microsoft</div>
+            </div>
+            <div class="file-type">
+                <div>🖼️ <strong>.emf</strong></div>
+                <div class="checkmark">✓</div>
+                <div>Formato avançado da Microsoft</div>
+            </div>
+            <div class="file-type">
+                <div>📄 <strong>.cgm</strong></div>
+                <div class="checkmark">✓</div>
+                <div>Formato gráfico metafísico</div>
+            </div>
+            <div class="file-type">
+                <div>🖼️ <strong>.cmx</strong></div>
+                <div class="checkmark">✓</div>
+                <div>Formato histórico da Microsoft</div>
+            </div>
+            <div class="file-type">
+                <div>📄 <strong>.tdraw</strong></div>
+                <div class="checkmark">✓</div>
+                <div>Formato nativo compacto e eficiente</div>
+            </div>
         </div>
     </div>
 
     <div class="footer">
-        <a href="https://github.com/josue2016-del/grafeno-vetor" target="_blank">grafeno-vetor</a> · 
-        Código livre sob MIT/Apache 2.0 · 
-        Built with egui + wgpu + Rust
+        <p>Grafeno Vetor - Editor vetorial profissional, open-source e multiplataforma</p>
+        <p>© 2026 Grafeno Vetor. Licenciado sob MIT ou Apache-2.0</p>
     </div>
 </body>
 </html>
+</recent-context>
