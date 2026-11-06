@@ -7,7 +7,7 @@
 <p align="center">
   <b>Vector illustration, page layout and print; an open-source, clean-room vector editor rebuilt from scratch in pure Rust.</b><br>
   Pages and layers, curves and nodes, artistic and paragraph text, fills and outlines, live effects, symbols, PDF/X and real <code>.cdr</code> files,<br>
-  in one native program for Windows, macOS and Linux, and in the browser.
+  in one native program for Windows, macOS and Linux.
 </p>
 
 <p align="center">
